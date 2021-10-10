@@ -1,0 +1,8 @@
+include /data/authelia/authelia.conf; 
+
+location / {
+    set $upstream $forward_scheme://$server:$port;
+    proxy_pass $upstream;
+    include /data/authelia/auth.conf; 
+    include /data/authelia/proxy.conf;
+}
