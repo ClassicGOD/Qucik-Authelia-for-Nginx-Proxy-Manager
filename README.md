@@ -16,7 +16,7 @@ Tutorial assumes that you are running Nginx Proxy Manager container from [jc21/n
    - this is not a Docker tutorial and your settings will depend on your Docker configuration so I won’t cover this here. 
    - Just remember to map your configuration directory/volume to `/config` inside of the container.
 6. Create `authelia` folder in directory or volume with your `Nginx Proxy Manager` configuration
-7. Copy [auth.conf](nginx_proxy_manager/authelia/auth.conf), [authelia.conf](nginx_proxy_manager/authelia/authelia.conf) and [proxy.conf](nginx_proxy_manager/authelia/proxy.conf) files from [nginx_proxy_manager/authelia/](nginx_proxy_manager/authelia/) into it
+7. Copy [auth.conf](nginx_proxy_manager/authelia/auth.conf), [authelia.conf](nginx_proxy_manager/authelia/authelia.conf) and [proxy.conf](nginx_proxy_manager/authelia/proxy.conf) files from [nginx_proxy_manager/authelia/](nginx_proxy_manager/authelia/) into directory you just created
 8. Edit `auth.conf` - change last line to match your auth endpoint
 9. If your Docker networks are set up in a way that allows the Nginx Proxy Manager container to locate the Authelia container by a name `authelia` you can skip this step. If not, edit the first line of `authelia.conf` to point to your Authelia container. 
 10. In Nginx Proxy Manager create authentication endpoint (for example `auth.example.com`) with Block Common Exploits and all SSL options enabled and paste [auth_endpoint](nginx_proxy_manager/auth_endpoint) contents into Advanced tab adjusting the annotated line if needed.
