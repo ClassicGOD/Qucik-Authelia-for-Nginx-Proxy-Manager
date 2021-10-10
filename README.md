@@ -1,17 +1,17 @@
-# Quick and easy Authelia configuration for Nginx Proxy Manager
+# Quick and easy `Authelia` configuration for Nginx Proxy Manager
 No Redis or external DB required. Good for a handful of users and endpoints. If you need more I recommend reading [Authelia documentation](https://www.authelia.com/docs/) to set up a more scalable installation. 
 
 All example files based on [Authelia documentation](https://www.authelia.com/docs/) please refer to it in case of any issues. 
 Tutorial provided as is without any warranty.
 
-Tutorial assumes that you are running Nginx Proxy Manager container from [jc21/nginx-proxy-manager](https://hub.docker.com/r/jc21/nginx-proxy-manager) (but with some modifications will probably work with different configurations) and have few hosts defined. 
+Tutorial assumes that you are running `Nginx Proxy Manager` container from [jc21/nginx-proxy-manager](https://hub.docker.com/r/jc21/nginx-proxy-manager) (but with some modifications will probably work with different configurations) and have few hosts defined. 
 
-1. Create a directory or a volume for authelia configuration.
+1. Create a directory or a volume for `Authelia` configuration.
 2. Copy example [configuration.yml](authelia/configuration.yml) and [users_database.yml](authelia/users_database.yml) from [authelia/](authelia/)
 3. Edit `configuration.yml` *I annotated what needs changing in the file.*
 4. Edit `users_database.yml` *I annotated what needs changing in the file.*
 5. Spin up an [Authelia container](https://hub.docker.com/r/authelia/authelia) 
-   - this is not a Docker tutorial and your settings will depend on your Docker configuration so I won’t cover this here. 
+   - This is not a Docker tutorial and your settings will depend on your Docker configuration so I won’t cover this here. 
    - Just remember to map your configuration directory/volume to `/config` inside of the container.
 6. Create `authelia` folder in directory or volume with your `Nginx Proxy Manager` configuration
 7. Copy [auth.conf](nginx_proxy_manager/authelia/auth.conf), [authelia.conf](nginx_proxy_manager/authelia/authelia.conf) and [proxy.conf](nginx_proxy_manager/authelia/proxy.conf) files from [nginx_proxy_manager/authelia/](nginx_proxy_manager/authelia/) into directory you just created
