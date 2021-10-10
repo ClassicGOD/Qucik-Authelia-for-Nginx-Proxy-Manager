@@ -1,5 +1,0 @@
-location / {
-    set $upstream_authelia http://authelia:9091; # if needed change to your Authelia container IP
-    proxy_pass $upstream_authelia;
-    include /data/authelia/proxy.conf;
-}
