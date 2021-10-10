@@ -16,9 +16,9 @@ Tutorial assumes that you are running `Nginx Proxy Manager` container from [jc21
 6. Create `authelia` folder in directory or volume with your `Nginx Proxy Manager` configuration
 7. Copy [auth.conf](nginx_proxy_manager/authelia/auth.conf), [authelia.conf](nginx_proxy_manager/authelia/authelia.conf) and [proxy.conf](nginx_proxy_manager/authelia/proxy.conf) files from [nginx_proxy_manager/authelia/](nginx_proxy_manager/authelia/) into directory you just created
 8. Edit `auth.conf` - change last line to match your auth endpoint
-9. If your Docker networks are set up in a way that allows the Nginx Proxy Manager container to locate the Authelia container by a name `authelia` you can skip this step. If not, edit the first line of `authelia.conf` to point to your Authelia container. 
-10. In Nginx Proxy Manager create authentication endpoint (for example `auth.example.com`) with Block Common Exploits and all SSL options enabled and paste [auth_endpoint](nginx_proxy_manager/auth_endpoint) contents into Advanced tab adjusting the annotated line if needed.
+9. If your Docker networks are set up in a way that allows the `Nginx Proxy Manager` container to locate the `Autheli`a container by a name `authelia` you can skip this step. If not, edit the first line of `authelia.conf` to point to your `Authelia` container. 
+10. In `Nginx Proxy Manager` create authentication endpoint (for example `auth.example.com`) with Block Common Exploits and all SSL options enabled and paste [auth_endpoint](nginx_proxy_manager/auth_endpoint) contents into Advanced tab adjusting the annotated line if needed.
 11. Check if you can access your auth endpoint and log in with your password.
 12. For every host you want to protect, paste the contents of [protected_endpoint](nginx_proxy_manager/protected_endpoint) into the Advanced tab in host configuration.
 
-That should be it. Just remember, Authelia remembers your session so don’t be surprised if you don’t see a login page on every endpoint. just go to your auth.example.com equivalent and click `LOGOUT` to kill the session for testing. 
+That should be it. Just remember, `Authelia` remembers your session so don’t be surprised if you don’t see a login page on every endpoint. just go to your auth.example.com equivalent and click `LOGOUT` to kill the session for testing. 
