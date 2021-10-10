@@ -1,4 +1,4 @@
-# Quick and easy **Authelia** configuration for **Nginx Proxy Manager**
+# Quick and easy Authelia configuration for Nginx Proxy Manager
 No Redis or external DB required. Good for a handful of users and endpoints. If you need more I recommend reading [Authelia documentation](https://www.authelia.com/docs/) to set up a more scalable installation. 
 
 All example files based on [Authelia documentation](https://www.authelia.com/docs/) please refer to it in case of any issues. 
