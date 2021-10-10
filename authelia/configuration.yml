@@ -1,1 +1,67 @@
+---
+###############################################################
+#                   Authelia configuration                    #
+###############################################################
 
+# Based on https://github.com/authelia/authelia/blob/master/examples/compose/lite/authelia/configuration.yml
+
+jwt_secret: a_very_important_secret # Change this to unique value!
+default_redirection_url: https://auth.example.com # Change to your auth endpoint address
+
+server:
+  host: 0.0.0.0
+  port: 9091
+
+log:
+  level: debug
+
+theme: dark
+
+totp:
+  issuer: authelia.com
+
+authentication_backend:
+  file:
+    path: /config/users_database.yml
+
+access_control:
+  default_policy: deny
+  rules:
+    # Rules applied to everyone - Set this up for your endpoints
+    - domain: public.example.com
+      policy: bypass
+    - domain: traefik.example.com
+      policy: one_factor
+    - domain: secure.example.com
+      policy: two_factor
+
+session:
+  name: authelia_session
+  secret: unsecure_session_secret # Change this to unique value!
+  expiration: 3600
+  inactivity: 300
+  domain: example.com  # Should match whatever your root protected domain is
+
+regulation:
+  max_retries: 3
+  find_time: 120
+  ban_time: 300
+
+storage:
+  local:
+    path: /config/db.sqlite3
+
+notifier:
+  smtp:
+    # Set this up to receive email notifications for password changes, 2FA setup etc.
+    username: test
+    password: password
+    host: mail.example.com
+    port: 25
+    sender: admin@example.com
+
+  # Uncomment the lines below and comment oput the SMTP config above if you don't want to use email. 
+  # filesystem:
+  #   filename: /config/notification.txt
+  
+...
