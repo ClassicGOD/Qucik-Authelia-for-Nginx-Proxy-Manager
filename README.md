@@ -4,7 +4,7 @@ No Redis or external DB required. Good for a handful of users and endpoints. If 
 All example files based on [Authelia documentation](https://www.authelia.com/docs/) please refer to it in case of any issues. 
 Tutorial provided as is without any warranty.
 
-Tutorial assumes that you are running Nginx Proxy Manager container from jc21/nginx-proxy-manager (but with some modifications will probably work with different configurations) and have few hosts defined. 
+Tutorial assumes that you are running Nginx Proxy Manager container from [jc21/nginx-proxy-manager](https://hub.docker.com/r/jc21/nginx-proxy-manager) (but with some modifications will probably work with different configurations) and have few hosts defined. 
 
 1. Create a directory or a volume for authelia configuration.
 2. Copy example [configuration.yml](authelia/configuration.yml) and [users_database.yml](authelia/users_database.yml) from [authelia/](authelia/)
