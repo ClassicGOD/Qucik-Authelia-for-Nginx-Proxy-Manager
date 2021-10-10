@@ -7,7 +7,7 @@ Tutorial assumes that you are running Nginx Proxy Manager container from jc21/ng
 
 1. Create a directory or a volume for authelia configuration.
 2. Copy example [configuration.yml](authelia/configuration.yml) and [users_database.yml](authelia/users_database.yml) from [authelia/](authelia/)
-3. Edit configuration.yml - I annotated what needs changing in the file. 
+3. Edit 'configuration.yml' - I annotated what needs changing in the file. 
 4. Edit users_database.yml - I annotated what needs changing in the file. 
 5. Spin up an Authelia container - this is not a Docker tutorial and your settings will depend on your Docker configuration so I won’t cover this here. Just remember to map your configuration directory/volume to /config inside of the container.
 6. In directory or volume with your Nginx Proxy Manager configuration create ‘authelia’ folder 
