@@ -1,6 +1,6 @@
 # Quick and easy Authelia configuration for Nginx Proxy Manager
 
-All files based on Authelia documentation: https://www.authelia.com/docs/ please refer to it in case of any issues. 
+All example files based on Authelia documentation: https://www.authelia.com/docs/ please refer to it in case of any issues. 
 Tutorial provided as is without any warranty.
 
 Tutorial assumes that you are running Nginx Proxy Manager container from jc21/nginx-proxy-manager (but with some modifications will probably work with different configurations) and have few hosts defined. 
