@@ -7,7 +7,7 @@ Tutorial provided as is without any warranty.
 Tutorial assumes that you are running `Nginx Proxy Manager` container from [jc21/nginx-proxy-manager](https://hub.docker.com/r/jc21/nginx-proxy-manager) (but with some modifications will probably work with different configurations) and have few hosts defined. 
 
 1. Create a directory or a volume for `Authelia` configuration.
-2. Copy example [configuration.yml](authelia/configuration.yml) and [users_database.yml](authelia/users_database.yml) from [authelia/](authelia/)
+2. Copy example [configuration.yml](authelia/configuration.yml) and [users_database.yml](authelia/users_database.yml) from [authelia/](authelia/) into this directory
 3. Edit `configuration.yml` *I annotated what needs changing in the file.*
 4. Edit `users_database.yml` *I annotated what needs changing in the file.*
 5. Spin up an [Authelia container](https://hub.docker.com/r/authelia/authelia) 
