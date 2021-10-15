@@ -16,7 +16,6 @@ Tutorial assumes that you are running `Nginx Proxy Manager` container from [jc21
    docker run -d --name=authelia -e TZ=Europe/Warsaw -v /path/to/authelia/config:/config --restart unless-stopped authelia/authelia:latest
    ```
    - Use your favourite method, I use Portainer.
-   - Just remember to map your configuration directory/volume to `/config` inside of the container.
 6. Create `authelia` folder in directory or volume with your `Nginx Proxy Manager` configuration
 7. Copy [auth.conf](nginx_proxy_manager/authelia/auth.conf), [authelia.conf](nginx_proxy_manager/authelia/authelia.conf) and [proxy.conf](nginx_proxy_manager/authelia/proxy.conf) files from [nginx_proxy_manager/authelia/](nginx_proxy_manager/authelia/) into directory you just created
 8. Edit `auth.conf` - change last line to match your auth endpoint
