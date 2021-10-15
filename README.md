@@ -11,11 +11,15 @@ Tutorial assumes that you are running `Nginx Proxy Manager` container from [jc21
 3. Edit `configuration.yml` *I annotated what needs changing in the file.*
 4. Edit `users_database.yml` *I annotated what needs changing in the file.*
 5. Spin up an [Authelia container](https://hub.docker.com/r/authelia/authelia) 
-   - This is not a Docker tutorial and your settings will depend on your Docker configuration so I won’t cover this here in detail but all you need is:
-     - iamge: `authelia/authelia:latest`
-     - volumes: `/config`
-     - env: `TZ: Your/Timezone`
-     - restart: `Unless stopped`
+   - This is not a Docker tutorial and your settings will depend on your Docker configuration so I won’t cover this here in detail but all you should need is:
+  ```
+  docker run -d \
+  --name=authelia \
+  -e TZ=Europe/Warsaw \
+  -v /path/to/pyload/config:/config \
+  --restart unless-stopped \
+  authelia/authelia:latest
+  ```
    - Use your favourite method, I use Portainer.
    - Just remember to map your configuration directory/volume to `/config` inside of the container.
 6. Create `authelia` folder in directory or volume with your `Nginx Proxy Manager` configuration
