@@ -11,7 +11,7 @@ Tutorial assumes that you are running `Nginx Proxy Manager` container from [jc21
 3. Edit `configuration.yml` *I annotated what needs changing in the file.*
 4. Edit `users_database.yml` *I annotated what needs changing in the file.*
 5. Spin up an [Authelia container](https://hub.docker.com/r/authelia/authelia) 
-   - This is not a Docker tutorial and your settings will depend on your Docker configuration so I won’t cover this here in detail but all you should need is:
+   - This is not a Docker tutorial and your settings will depend on your Docker configuration so I won’t cover this here in detail but minimal container config forthis tutorial is (plus optional network depending on your config):
    ```
    docker run -d --name=authelia -e TZ=Europe/Warsaw -v /path/to/authelia/config:/config --restart unless-stopped authelia/authelia:latest
    ```
