@@ -21,4 +21,4 @@ Tutorial assumes that you are running `Nginx Proxy Manager` container from [jc21
 11. Check if you can access your auth endpoint and log in with your password.
 12. For every host you want to protect, paste the contents of [protected_endpoint](nginx_proxy_manager/protected_endpoint) into the Advanced tab in host configuration.
 
-That should be it. Just remember, `Authelia` remembers your session so don’t be surprised if you don’t see a login page on every endpoint. just go to your auth.example.com equivalent and click `LOGOUT` to kill the session for testing. 
+That should be it. Just remember, `Authelia` remembers your session so don’t be surprised if you don’t see a login page on every endpoint. Kust go to your `auth.example.com` equivalent and click `LOGOUT` to kill the session for testing. 
