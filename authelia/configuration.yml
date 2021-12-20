@@ -54,6 +54,7 @@ regulation:
   ban_time: 300
 
 storage:
+  encryption_key: storage_encryption_key # Change this to unique value! Minimum 20 characters! 
   local:
     path: /config/db.sqlite3
 
