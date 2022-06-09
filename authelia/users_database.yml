@@ -7,13 +7,11 @@
 
 # List of users
 users:
-  authelia: #Change to your username
+  authelia: #Change 'authelia' to your desired username
     displayname: "Authelia User" 
     # Default password is 'authelia'. To generate new password hash run:
     # docker run authelia/authelia:latest authelia hash-password 'yourpassword'
-    password: "$6$rounds=50000$BpLnfgDsc2WD8F2q$Zis.ixdg9s/UOJYrs56b5QEZFiZECu0qZVNsIYxBaNJ7ucIL.nlxVCT5tqh8KHG8X4tlwCFm5r6NTOZZ5qRFN/"  # yamllint disable-line rule:line-length
-    email: authelia@authelia.com
-    groups:
-      - admins
-      - dev
+    password: "$6$rounds=50000$BpLnfgDsc2WD8F2q$Zis.ixdg9s/UOJYrs56b5QEZFiZECu0qZVNsIYxBaNJ7ucIL.nlxVCT5tqh8KHG8X4tlwCFm5r6NTOZZ5qRFN/"
+    email: authelia@example.com
+    groups: []
 ...
